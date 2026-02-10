@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somali East Roleplay</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-gray-900 p-4">
+        <h1 class="text-3xl text-center font-bold text-blue-400">SOMALI EAST ROLEPLAY</h1>
+        <nav class="mt-2">
+            <ul class="flex justify-center space-x-4">
+                <li><a href="#" class="text-blue-300 hover:text-blue-500">Home</a></li>
+                <li><a href="#modpacks" class="text-blue-300 hover:text-blue-500">Modpacks</a></li>
+                <li><a href="https://discord.gg/yourdiscordlink" class="text-blue-300 hover:text-blue-500">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center h-screen bg-gray-800">
+        <h2 class="text-2xl font-semibold mb-4">Welcome to Somali East Roleplay!</h2>
+        <a href="#download" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Download Launcher</a>
+    </section>
+
+    <!-- Live Server Status -->
+    <section class="p-6 bg-gray-700">
+        <div class="max-w-md mx-auto bg-gray-800 p-4 rounded-lg shadow-lg">
+            <h3 class="text-lg font-bold text-cyan-400">Live Server Status</h3>
+            <p class="mt-2">Players Online: <span id="players-online">0</span></p>
+            <p>Ping: <span id="ping">0 ms</span></p>
+            <p>Server IP: <span id="server-ip">your.server.ip</span></p>
+        </div>
+    </section>
+
+    <!-- Modpack Gallery -->
+    <section id="modpacks" class="p-6 bg-gray-800">
+        <h3 class="text-2xl font-bold text-blue-400 text-center">Modpacks</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            <div class="bg-gray-700 rounded-lg p-4">
+                <img src="https://via.placeholder.com/150" alt="Somali Car Pack" class="w-full rounded-lg">
+                <h4 class="text-lg font-semibold mt-2">Somali Car Pack</h4>
+                <a href="https://drive.google.com/yourmodlink" class="block bg-blue-500 text-white text-center px-4 py-2 rounded mt-2 hover:bg-blue-600">Download</a>
+            </div>
+            <!-- Repeat the above block for more modpacks -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 p-4 text-center">
+        <p>Admin Email: <a href="mailto:starbedeloga@gmail.com" class="text-blue-300">starbedeloga@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // JavaScript to update server status
+        function updateServerStatus() {
+            // Simulated server status data
+            const playersOnline = Math.floor(Math.random() * 100);
+            const ping = Math.floor(Math.random() * 100) + 20; // Simulated ping between 20ms and 119ms
+            const serverIP = "192.168.1.1"; // Replace with actual server IP
+
+            document.getElementById('players-online').innerText = playersOnline;
+            document.getElementById('ping').innerText = ping + " ms";
+            document.getElementById('server-ip').innerText = serverIP;
+        }
+
+        // Update server status on page load
+        window.onload = updateServerStatus;
+    </script>
+</body>
+
+</html>
